@@ -146,6 +146,20 @@ const PrevIcon = ({ size }) => {
   );
 };
 
+const DownDirIcon = ({ size }) => {
+  return (
+    <svg
+      role="img"
+      height="16"
+      width="16"
+      class="Svg-sc-1bi12j5-0 gSLhUO zlXkx48bPJsjDXoqsZvD"
+      viewBox="0 0 16 16"
+      xmlns="http://w3.org/2000/svg"
+    >
+      <path fill="currentColor" d="M13 10L8 4.206 3 10z"></path>
+    </svg>
+  );
+};
 const Icon = ({ name, size = 24 }) => {
   const icons = {
     home: HomeIcon,
@@ -156,6 +170,7 @@ const Icon = ({ name, size = 24 }) => {
     download: DownloadIcon,
     prev: PrevIcon,
     next: NextIcon,
+    downdirıcon: DownDirIcon,
   };
   const Component = icons[name];
   return <Component size={size} />;
