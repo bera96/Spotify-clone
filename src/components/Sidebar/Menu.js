@@ -1,31 +1,32 @@
 import React from 'react';
 import { Icon } from 'Icons';
+import {NavLink} from 'react-router-dom'
 
 function Menu() {
     return (
         <nav className="px-2">
             <ul className="flex flex-col">
                 <li>
-                    <a href="#" className="h-10 flex items-center  gap-x-4 text-sm font-semibold text-white rounded hover:text-white px-4 bg-active">
+                    <NavLink className={({ isActive }) => isActive? "bg-active text-white h-10 flex items-center  gap-x-4 text-sm font-semibold text-link rounded hover:text-white px-4": 'h-10 flex items-center  gap-x-4 text-sm font-semibold text-link rounded hover:text-white px-4'} exact="true" to={"/"}>
                         <span>
                             <Icon name="home" />
                         </span>
                         Ana sayfa
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="#" className="h-10 flex items-center  gap-x-4 text-sm font-semibold text-link rounded hover:text-white px-4">
+                    <NavLink className={({ isActive }) => isActive? "bg-active text-white h-10 flex items-center  gap-x-4 text-sm font-semibold text-link rounded hover:text-white px-4": 'h-10 flex items-center  gap-x-4 text-sm font-semibold text-link rounded hover:text-white px-4'} to={"/search"}>
                         <span>
                             <Icon name="search"/>
                         </span>
                         Ara
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="#" className="h-10 flex items-center  gap-x-4 text-sm font-semibold text-link rounded hover:text-white px-4">
+                    <NavLink className={({ isActive }) => isActive? "bg-active text-white h-10 flex items-center  gap-x-4 text-sm font-semibold text-link rounded hover:text-white px-4": 'h-10 flex items-center  gap-x-4 text-sm font-semibold text-link rounded hover:text-white px-4'} to={"/collection"}>
                         <Icon name="collection"/>
                         Kitaplığım
-                    </a>
+                    </NavLink>
                 </li>
             </ul>
         </nav>
